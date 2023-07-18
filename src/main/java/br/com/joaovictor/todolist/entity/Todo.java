@@ -17,6 +17,18 @@ public class Todo {
 	private String description;
 	private boolean isCompleted;
 	private Integer priority;
+	
+	public Todo () {}
+	
+	public Todo(String name, String description, boolean isCompleted, Integer priority) {
+		this.name = name;
+		this.description = description;
+		this.isCompleted = isCompleted;
+		this.priority = priority;
+	}
+
+
+
 	public Long getId() {
 		return id;
 	}
