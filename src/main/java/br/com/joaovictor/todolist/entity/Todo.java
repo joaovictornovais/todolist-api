@@ -15,15 +15,15 @@ public class Todo {
 	private Long id;
 	private String name;
 	private String description;
-	private boolean isCompleted;
+	private boolean completed;
 	private Integer priority;
 	
 	public Todo () {}
 	
-	public Todo(String name, String description, boolean isCompleted, Integer priority) {
+	public Todo(String name, String description, boolean completed, Integer priority) {
 		this.name = name;
 		this.description = description;
-		this.isCompleted = isCompleted;
+		this.completed = completed;
 		this.priority = priority;
 	}
 
@@ -47,11 +47,11 @@ public class Todo {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public boolean isCompleted() {
-		return isCompleted;
+	public boolean getCompleted() {
+		return completed;
 	}
-	public void setCompleted(boolean isCompleted) {
-		this.isCompleted = isCompleted;
+	public void setCompleted(boolean completed) {
+		this.completed = completed;
 	}
 	public Integer getPriority() {
 		return priority;
