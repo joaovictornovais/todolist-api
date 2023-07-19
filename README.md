@@ -6,7 +6,7 @@
     <img src="https://img.shields.io/badge/Tipo-Desafio-blue" />
 </p>
 
-<p>API para gerenciar tarefas (CRUD)</p>
+<p>API para gerenciar tarefas com operações CRUD</p>
 
 ## Tecnologias
 
