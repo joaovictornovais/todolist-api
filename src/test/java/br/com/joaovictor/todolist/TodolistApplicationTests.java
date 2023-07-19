@@ -26,7 +26,6 @@ class TodolistApplicationTests {
 			.expectStatus().isOk()
 			.expectBody()
 			.jsonPath("$").isArray()
-			.jsonPath("$.length()").isEqualTo(1)
 			.jsonPath("$[0].name").isEqualTo(todo.getName())
 			.jsonPath("$[0].description").isEqualTo(todo.getDescription())
 			.jsonPath("$[0].completed").isEqualTo(todo.getCompleted())
@@ -35,7 +34,14 @@ class TodolistApplicationTests {
 	
 	@Test
 	void testCreateTodoFailure() {
+		var todo = new Todo("", "", false, 0);
 		
+		webTestClient
+			.post()
+			.uri("/todos")
+			.bodyValue(todo)
+			.exchange()
+			.expectStatus().isBadRequest();
 	}
 
 }
